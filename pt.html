@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwimPilot Termos de Serviço</title>
+    <style>
+        :root {
+            --primary-color: #0071e3;
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --bg-gray: #f5f5f7;
+            --border-color: #d2d2d7;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--bg-gray);
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            padding: 40px 20px;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 240px;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .nav-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .nav-list {
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-bottom: 4px;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 8px 12px;
+            font-size: 14px;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background-color: var(--bg-gray);
+        }
+
+        .nav-link.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 48px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            scroll-margin-top: 100px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 28px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .highlight-box {
+            background-color: var(--bg-gray);
+            border-left: 3px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 6px;
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+                gap: 0;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: static;
+                margin-bottom: 0;
+            }
+
+            .nav-title {
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+
+            .nav-list {
+                display: flex;
+                overflow-x: auto;
+                gap: 10px;
+                padding-bottom: 10px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-item {
+                margin-bottom: 0;
+            }
+
+            .nav-link {
+                white-space: nowrap;
+                font-size: 16px;
+                padding: 12px 16px;
+            }
+
+            .content {
+                padding: 24px;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 28px;
+                margin-bottom: 32px;
+                padding-top: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+                margin-top: 32px;
+                scroll-margin-top: 80px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">SwimPilot</div>
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="nav-title">Conteúdo</div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#section1" class="nav-link">1. Visão Geral do Serviço</a></li>
+                <li class="nav-item"><a href="#section2" class="nav-link">2. Assinatura e Pagamento</a></li>
+                <li class="nav-item"><a href="#section3" class="nav-link">3. Política de Reembolso</a></li>
+                <li class="nav-item"><a href="#section4" class="nav-link">4. Privacidade</a></li>
+                <li class="nav-item"><a href="#section5" class="nav-link">5. Contato</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h1>SwimPilot Termos de Serviço</h1>
+
+            <h2 id="section1">1. Visão Geral do Serviço</h2>
+            <p>SwimPilot é um aplicativo para registrar e analisar treinos de natação.</p>
+
+            <h3>Recursos</h3>
+            <ul>
+                <li>Rastreamento e registro de treinos de natação</li>
+                <li>Contagem de voltas via sensores do Apple Watch</li>
+                <li>Estatísticas de tempo, distância e calorias do treino</li>
+                <li>Integração com Apple HealthKit</li>
+            </ul>
+
+            <h3>Recursos Premium</h3>
+            <ul>
+                <li>Backup na nuvem (sincronize seus registros entre dispositivos)</li>
+                <li>Remoção de anúncios</li>
+            </ul>
+
+            <h2 id="section2">2. Assinatura e Pagamento</h2>
+
+            <h3>Planos de Assinatura</h3>
+            <ul>
+                <li><strong>Assinatura Mensal:</strong> Renovação automática mensal</li>
+                <li><strong>Assinatura Anual:</strong> Renovação automática anual</li>
+            </ul>
+
+            <h3>Renovação Automática</h3>
+            <p>As assinaturas renovam automaticamente 24 horas antes do término do período atual e são cobradas em sua conta Apple.</p>
+
+            <h3>Cancelamento</h3>
+            <p>Você pode cancelar pelo menos 24 horas antes do término da assinatura. Após o cancelamento, os recursos premium permanecem disponíveis até o término do período atual.</p>
+
+            <div class="highlight-box">
+                <p><strong>Gerenciar Assinatura:</strong> Ajustes do iPhone → Apple ID → Assinaturas → SwimPilot</p>
+            </div>
+
+            <h2 id="section3">3. Política de Reembolso</h2>
+            <p>Todos os pagamentos e reembolsos são processados através da Apple App Store.</p>
+
+            <h3>Solicitar Reembolso</h3>
+            <p>Para solicitar um reembolso, visite o <a href="https://reportaproblem.apple.com" target="_blank" style="color: var(--primary-color);">Suporte da Apple</a>.</p>
+
+            <h3>Limitações de Reembolso</h3>
+            <ul>
+                <li>Períodos de assinatura já utilizados não são reembolsáveis</li>
+                <li>Os serviços premium permanecem ativos até o término do período atual, e esse período não é reembolsável</li>
+            </ul>
+
+            <h2 id="section4">4. Privacidade</h2>
+            <p>SwimPilot coleta as seguintes informações:</p>
+            <ul>
+                <li>Registros de treinos de natação (distância, tempo, voltas, etc.)</li>
+                <li>Dados dos sensores do Apple Watch (acelerômetro, frequência cardíaca, etc.)</li>
+                <li>Dados do Apple HealthKit (se você conceder permissão)</li>
+            </ul>
+
+            <h3>Armazenamento de Dados</h3>
+            <ul>
+                <li><strong>Usuários Gratuitos:</strong> Armazenado apenas no dispositivo</li>
+                <li><strong>Usuários Premium:</strong> Dispositivo + backup na nuvem</li>
+            </ul>
+
+            <h3>Exclusão de Dados</h3>
+            <p>Excluir o aplicativo remove os dados do seu dispositivo.</p>
+            <p>Para detalhes sobre a exclusão de dados na nuvem, consulte a Política de Privacidade.</p>
+
+            <div class="highlight-box">
+                <p><strong>Nota:</strong> Este aplicativo é uma ferramenta de rastreamento de fitness e não um dispositivo médico. A precisão dos dados dos sensores depende do desempenho do hardware do Apple Watch e do ambiente de uso.</p>
+            </div>
+
+            <h2 id="section5">5. Contato</h2>
+            <p>Para dúvidas sobre estes termos ou o serviço, entre em contato conosco.</p>
+
+            <div class="highlight-box">
+                <p><strong>E-mail:</strong> o3orbit.labs@gmail.com</p>
+            </div>
+
+            <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 13px;">
+                Última atualização: 30 de outubro de 2025
+            </p>
+        </main>
+    </div>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Update active state
+                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Highlight current section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('h2[id]');
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
